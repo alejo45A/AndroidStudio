@@ -1,0 +1,22 @@
+package com.example.myapplication.GestionTransporteUrbano
+
+// Una clase abstracta es aquella que no se puede instanciar. Las clases hijas deben usar sus metodos abstractos
+
+// ------------------------------------ EXPLICACION PUNTO UNO ------------------------------------------------
+
+// Se crea la clase abstracta Vehiculo. Con esta clase se pueden crear otras clases como Bus o Auto
+abstract class Vehiculo
+
+// Se define el constructor primario. Son propiedades ya que se puede acceder a ellas con this
+(val id: String, val capacidad: Int, val velocidadMaxima: Double )
+
+{
+// Se crean metodos abstractos sin implementacion
+    abstract fun moverse()
+    abstract fun detenerse()
+
+// Es un metodo el cual usa las propiedades de la clase abstracta para mostar informacion
+    fun infoVehiculo() {
+        println("La placa del auto es ${id}. Tiene una capacidad para ${capacidad} pasajeros y su velocidad maxima es de ${velocidadMaxima}")
+    }
+}
